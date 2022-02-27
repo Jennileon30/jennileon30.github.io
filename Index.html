@@ -1,0 +1,326 @@
+
+<html>
+  <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/729376545902297089/947562637976281138/mgh_17.png">
+  <body oncontextmenu="return false">
+  <head>
+      <title>Jennileon30</title>
+      <meta name="description" content="Jennileon30">
+  </head>
+  
+  <body>
+  
+      <video autoplay muted loop  playsinline="true" class="video" id="video">
+          <source src="Nimo & Capo - LEYLA (prod. von PzY) [Official 4K Video].mp4" playsinline>
+      </video>
+  
+      <div class="content">
+          <div class="visible" id="showContent" style="opacity: 0;">
+              <div class="title">
+                  Jennileon30
+  
+                  <div class="title-footer">
+                      Nimo & Capo - LEYLA
+                  </div>
+              </div>
+  
+              <div class="selection">
+              </div>
+          </div>
+  
+          <div class="play" id="playContent">
+              <div class="title">
+                  <a onclick="showContent();">CLICK</a>
+  
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <br>
+      <script language=JavaScript>
+      var message="";
+      function clickIE() {if (document.all) {(message);return false;}}
+      function clickNS(e) {if 
+      (document.layers||(document.getElementById&&!document.all)) {
+      if (e.which==2||e.which==3) {(message);return false;}}}
+      if (document.layers) 
+      {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+      else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+      </script>
+      <br>
+<script language="JavaScript1.2">
+function disableselect(e){
+return false
+}
+function reEnable(){
+return true
+}
+document.onselectstart=new Function ("return false")
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+  </body>
+  
+  </html>
+
+<script>
+  function showContent()
+{
+  let play = document.getElementById("playContent");
+  let content = document.getElementById("showContent");
+  let video = document.getElementById("video");
+
+  video.play();
+  video.muted = false;
+  video.volume = 0.1;
+
+  content.style.opacity = 1;
+  play.style.opacity = 0;
+}
+
+
+
+
+document.ontouchmove = function(e) {e.preventDefault()};
+
+$(document).on("contextmenu", function (e) {        
+  e.preventDefault();
+});
+
+$(document).keydown(function (event) {
+  if (event.keyCode == 123) { // Prevent F12
+      return false;
+  } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
+      return false;
+  }
+});
+</script>
+
+<style>
+html {
+cursor: url('https://cdn.discordapp.com/attachments/729376545902297089/947562594791718992/cursor.png'), default;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+  body{
+  background-color: black;
+  color: darkred;
+  font-family: "Blacklisted";
+  user-select: none;
+}
+
+@font-face{
+  font-family: "Blacklisted";
+  src: url("StickyNumbers.ttf");
+}
+
+.title-footer{
+  margin-top: -15px;
+  font-size: 13px;
+}
+
+.blur {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.video{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  filter: blur(5px) contrast(1.0);
+}
+
+.content{
+  width: 100%;
+  top: 45%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: fixed;
+  text-align: center;
+  font-size: 90px;
+}
+
+.visible{
+transition: all 1s;
+}
+
+.spacer{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.185);
+}
+
+.selection{
+  margin-top: 50px;
+  font-size: 25px;
+  color: #bfcbf1;
+}
+
+.selection a{
+  color: #bfcbf18c;
+  letter-spacing: 15px;
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.623);
+  transition: all 1s;
+}
+
+
+.selection a:hover{
+  transition: all 1s;
+  color: #2c5af18c;
+  letter-spacing: 15px;
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.925);
+}
+
+.play{
+transition: 1000ms;
+}
+
+.play a{
+color: rgba(102, 102, 102, 0.541);
+text-decoration: none;
+transition: 1000ms;
+}
+
+.play a:hover{
+text-decoration: none;
+transition: 1000ms;
+color: darkred;
+}
+
+.discord-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+
+.wrapper-buttons {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+
+.wrapper-buttons > * {
+  margin-bottom: 10px;
+}
+
+.wrapper-buttons > *:first-child {
+  margin-top: 10px;
+}
+
+.wrapper-buttons > *:last-child {
+  margin-bottom: 0px;
+}
+
+.white-button,
+.blue-button {
+  display: inline-block;
+  font-family: Whitney, "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 11pt;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 45px;
+  width: 250px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.blue-button {
+  background-color: #7289da;
+  border: 2px solid #7289da;
+  color: #fff;
+}
+
+.white-button {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #000;
+}
+
+.wrapper-nitro-buttons {
+  margin: 0 auto !important;
+  width: 60%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: block;
+}
+
+.black-nitro-button,
+.green-nitro-button {
+  display: inline-block;
+  font-family: Whitney, "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 11pt;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 45px;
+  width: 200px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.green-nitro-button {
+  background-color: #43b581;
+  border: 2px solid #43b581;
+  color: #fff;
+}
+
+.black-nitro-button {
+  background-color: #090909;
+  border: 2px solid #090909;
+  color: #fff;
+}
+
+.discount {
+  display: inline;
+  border: 1px solid hsla(0, 0%, 100%, 0.3);
+  color: hsla(0, 0%, 100%, 0.75);
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 3px;
+  padding: 3px;
+  width: 50px;
+}
+
+.blue-button:hover,
+.white-button:hover,
+.black-nitro-button:hover,
+.green-nitro-button:hover {
+  transform: translateY(1px);
+}
+
+.blue-button:active,
+.white-button:active,
+.black-nitro-button:active,
+.green-nitro-button:active {
+  transform: translateY(2px);
+}
+
+.blue-button,
+.white-button,
+.black-nitro-button,
+.green-nitro-button {
+  outline: transparent !important;
+}
+
+</style>
